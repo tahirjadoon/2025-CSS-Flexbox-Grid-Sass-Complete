@@ -1,0 +1,12 @@
+# any opened word document files
+~$0*.docx
+~$*.docx
+/documents/~$0*.docx
+/documents/~$*.docx
+
+# dependencies
+/node_modules
+
+# System Files
+.DS_Store
+Thumbs.db
