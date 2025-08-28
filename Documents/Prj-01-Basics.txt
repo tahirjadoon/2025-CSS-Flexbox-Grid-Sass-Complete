@@ -1,0 +1,120 @@
+Basic html page template
+------------------------------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>uHost</title>
+    <link rel="shortcut icon" href="favicon.png">
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Get the freedom you deserve.</h1>
+        </section>
+    </main>
+</body>
+
+</html>
+
+Alternatively in html type ! and then tab to add html boilerplate. 
+
+There are 3 different ways of adding css 
+------------------------------
+1. inline style by adding style="" attribute to the html tag. Not a recommended approach. 
+2. inside the head section add <style></style> section and target the html tags to which you want to apply the style to by using a selector using # for id or . for class or the html tag. These are css rules. 
+3. adding a custom .css file. This will contain the styles just like above style section. Add the css to your html page. 
+    <link rel="stylesheet" href="site.css">
+
+Adding Google fonts
+------------------------------
+Go to: https://fonts.google.com/
+find a font to use, in my case anton
+Pick the embeded code and put it in your html file before the .css file link. 
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+You can also import the fonts in your css file
+	@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+and another one 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+And then use it like 
+h1{
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+Selectors
+------------------------------
+Check css-selectors.pdf for details. 
+
+CSS Specificity
+------------------------------
+Multiple rules can apply to the same element
+1. Resolve conflicts arising from multiple rules
+2. Inline styles
+3. #ID selector
+4. .class, :pseudo-class and attribute selectors
+5. Tag and ::pseudo-element selectors 
+
+Combinators
+------------------------------
+Be more clear about our rules and select by passing more information to the selector 
+1. Adjacent Sibling
+    > Elements share the same parent
+    > Second element comes immediately after first element 
+
+    h2 + p {color: red;}
+    <div>
+        <h2>Not applied</h2>
+        <p>Applied</p>
+        <h3>Not applied</h3>
+        <p>Not applied</p>
+        <h2>Not applied</h2>
+        <p>Applied</p>
+    </div>
+
+2. General Sibling
+    > Elements share the same parent
+    > Second element comes after first element
+
+    h2 ~ p{color: red;}
+    <div>
+        <h2>Not applied</h2>
+        <p>Applied</p>
+        <h2>Not applied</h3>
+        <h3>Not applied</h2>
+        <p>Applied</p>
+    </div>
+
+
+3. Child
+    > Second element is a direct child of first element
+
+    div > p{color: red;}
+    <div>
+        <div>Not applied</div>
+        <p>Applied</p>
+        <article>
+            <p>Not applied</p>
+        </article>
+        <p>Applied</p>
+    </div>
+
+4. Descendant
+    > Second element is a descendant of the first element
+    
+    div p{color: red;}
+    <div>
+        <div>Not applied</div>
+        <p>Applied</p>
+        <article>
+            <p>Applied</p>
+        </article>
+        <p>Applied</p>
+    </div>
