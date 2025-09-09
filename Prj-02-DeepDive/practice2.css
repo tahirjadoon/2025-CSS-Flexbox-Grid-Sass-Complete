@@ -1,0 +1,40 @@
+body{
+    font-family: sans-serif;
+    margin: 0; 
+}
+
+.main{
+    background: yellow;
+    overflow: hidden;
+}
+
+/*clearing the floated items*/
+.main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.box1{
+    background: red;
+    padding: 5px 8px 10px 13px;
+    margin: 15px 8px 10px 13px;
+    border-bottom: 1px solid transparent;
+    width: 50%;
+    height: 300px;
+    float: left;
+    /*display: none;*/
+}
+
+.box2{
+    background: green;
+    padding: 5px 8px 10px 13px;
+    margin: 15px 8px 10px 13px;
+    width: 40%;
+    height: 300px;
+    float: left;
+}
+
+.main > div:last-of-type:hover{
+    background: blue;
+}

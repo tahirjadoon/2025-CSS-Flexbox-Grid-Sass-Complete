@@ -1,0 +1,96 @@
+Importing fonts from google
+------------------------------
+    @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+Units
+------------------------------
+    px, %
+
+Combinators
+------------------------------
+    1. Adjacent Sibling
+        h2 + p {color: red;}
+
+    2. General Sibling
+        h2 ~ p{color: red;}
+
+    3. Child
+       div > p{color: red;}
+
+    4. Descendant
+        div p{color: red;}
+
+box-sizing
+------------------------------
+content-box [default]: 
+    - Width/height apply only to the content.
+    - Padding and border are added outside the content box, increasing the total size of the element.
+    - Margin is always outside the box and unaffected by box-sizing.
+
+border-box: width and height includes the padding and margin
+    - Width/height include content, padding, and border.
+    - Padding and border are absorbed into the declared width/height.
+    - Margin still sits outside and is unaffected
+    - set it through universal select which is *{} since inheritance will not work if provided with body for the block level elements like section
+
+display
+------------------------------
+    Basic Display Types
+        - block : Element takes up full width, starts on a new line (e.g., <div>, <p>)
+        - inline : Element flows within text, no width/height control (e.g., <span>)
+        - inline-block : Like inline, but allows width and height
+        - none : Element is removed from layout (invisible and non-interactive)
+        - contents : Makes the container disappear, leaving only its children
+
+    Layout Containers
+        - flex : Creates a flex container for flexible layouts
+        - inline-flex : Same as flex, but behaves like an inline element 
+        - grid : Creates a grid container for two-dimensional layouts
+        - inline-grid : Same as grid, but inline 
+        - flow-root : Establishes a new block formatting context
+
+    Table-Like Layouts
+        - table : Behaves like a <table> 
+        - table-row, table-cell etc: Mimics specific table parts like rows and cells 
+
+    Other Values
+        - list-item : Behaves like a <li> with bullet styling 
+        - run-in : Rarely used; behaves as block or inline based on context 
+        - initial : Resets to default (inline) 
+        - inherit : Inherits from parent element
+        - unset : Removes any set value, reverting to inherited or initial 
+
+    Block level elements 
+        <div> , <section> , <article> , <nav>  but also <h1> , <h2>  etc and <p>
+
+    Inline elements
+        <a> , <span> , <img> etc
+        margin-top  and margin-bottom  have no effect on the element
+        width  or height  on an inline element also has no effect
+
+    Inline-Block
+        Behaves like and inline element
+        Respects width, height, margin and padding like a block element
+        Great for button, forms inputs or layouts
+
+Pseudo Classes and elements
+------------------------------
+    classes: :class name --- specific state of the element [hover, focus, active, first-Child, nth-child, checked, not(selector)]
+    element: :: element name --- specific part of an element [before, after, first-letter, first-line, placeholder, selection]
+
+    we can combine pseudo classes and elements as well 
+
+    a:hover::after {
+        content: " 🔗";
+    }
+
+
+
+
+
+
+
+
+
+
+
