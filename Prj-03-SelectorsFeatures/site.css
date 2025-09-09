@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box; /*see css.txt, adding it here since in body it will not work for block level elements like section */
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; 
+}
+
+/*Header start*/
+header.header-main{
+    background-color: #2ddf5c;
+    width: 100%;
+    padding: 8px 16px;
+}
+
+header.header-main > div { /*direct child*/
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header.header-main > div > .header-main__brand{
+    text-decoration: none;
+    color: #0e4f1f;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.nav-main{
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 75px);
+    vertical-align: middle;
+}
+
+.nav-main .nav-main__items{
+    list-style: none;       /* Removes bullets */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-main .nav-main__items li{
+    display: inline-block; /* Makes list items side by side */
+    margin: 0 16px;
+}
+
+.nav-main .nav-main__items li a{
+    text-decoration: none;
+    color: #0e4f1f;
+    font-weight: bold;
+    padding: 3px 0;
+}
+
+.nav-main .nav-main__items li a:hover, 
+.nav-main .nav-main__items li a:active{
+    color: white;
+    border-bottom: 5px solid white;
+}
+
+.nav-main .nav-main__items li.nav-main__item--cta a{
+    color: white;
+    background: #ff1b68;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.nav-main .nav-main__items li.nav-main__item--cta a:hover, 
+.nav-main .nav-main__items li.nav-main__item--cta a:active{
+    color: #ff1b68;
+    background: white;
+    border: none;
+}
+/*Header end*/
+
+#product-overview{
+    background: url("freedom.jpg");
+    width: 100%;
+    /*border: 5px black solid;
+    margin: 10px;*/
+    height: 528px;
+    padding: 10px;
+}
+
+/*combinators*/
+#product-overview h1{
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+.section-title{
+    color: #2ddf5c;
+}
