@@ -1,0 +1,1 @@
+Move the index.html, site.css, favicon.png, and freedom.jpg from Prj-03-SelectorsFeatures 
