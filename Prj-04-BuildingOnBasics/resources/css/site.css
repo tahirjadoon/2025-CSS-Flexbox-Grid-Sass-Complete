@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box; /*see css.txt, adding it here since in body it will not work for block level elements like section */
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; 
+}
+
+.clearfix{
+    clear: both;
+}
+
+/*Header start*/
+header.header-main{
+    background-color: #2ddf5c;
+    width: 100%;
+    padding: 8px 16px;
+}
+
+header.header-main > div { /*direct child*/
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header.header-main > div > .header-main__brand{
+    text-decoration: none;
+    color: #0e4f1f;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.nav-main{
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 75px);
+    vertical-align: middle;
+}
+
+.nav-main .nav-main__items{
+    list-style: none;       /* Removes bullets */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-main .nav-main__items li{
+    display: inline-block; /* Makes list items side by side */
+    margin: 0 16px;
+}
+
+.nav-main .nav-main__items li a{
+    text-decoration: none;
+    color: #0e4f1f;
+    font-weight: bold;
+    padding: 3px 0;
+}
+
+.nav-main .nav-main__items li a:hover, 
+.nav-main .nav-main__items li a:active{
+    color: white;
+    border-bottom: 5px solid white;
+}
+
+.nav-main .nav-main__items li.nav-main__item--cta a{
+    color: white;
+    background: #ff1b68;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.nav-main .nav-main__items li.nav-main__item--cta a:hover, 
+.nav-main .nav-main__items li.nav-main__item--cta a:active{
+    color: #ff1b68;
+    background: white;
+    border: none;
+}
+/*Header end*/
+
+/*Footer start - using decendant approach and not child*/
+.main-footer{
+    background: black;
+    padding: 32px;
+    margin-top: 48px;
+}
+
+.main-footer .main-footer__links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.main-footer .main-footer__links .main-footer__link {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.main-footer .main-footer__links .main-footer__link a{
+    color: #fff;
+}
+
+.main-footer .main-footer__links .main-footer__link a:hover,
+.main-footer .main-footer__links .main-footer__link a:active{
+    color: #ccc;
+}
+
+/*Footer end*/

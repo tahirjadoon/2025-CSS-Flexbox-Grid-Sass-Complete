@@ -1,0 +1,9 @@
+Move the index.html, site.css, favicon.png, and freedom.jpg from Prj-03-SelectorsFeatures 
+
+The project has been places inside a well defined directory struture. 
+
+resources folder has css and images folder now.
+
+css has been divided into individual content specific css files
+
+site.css will have site wise styles only
