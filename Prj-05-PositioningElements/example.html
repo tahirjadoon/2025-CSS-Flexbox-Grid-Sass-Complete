@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Position</title>
+        <style>
+            html {
+                background: #b3b3b3; padding: 15px; border: 5px solid white; margin: 15px; height: 2000px;
+            }
+
+            body {
+                background: #fa923f; padding: 20px; border: 5px solid black; margin: 0;
+            }
+            
+            .parent {
+                background: white; padding: 20px; border: 5px solid black; margin: 0;
+            }
+            
+            .parent div {
+                background: rgb(105, 105, 109); color: white; padding: 10px; border: 5px solid black; margin: 10px;
+            }
+
+            .parent .one{
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                margin: 0;
+                box-sizing: border-box;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="one">Navigation Bar</div>
+            <div class="two">Background Image</div>
+            <div class="three">Features</div>
+        </div>
+    </body>
+</html>
