@@ -98,10 +98,10 @@ box-shadow
 Position
 ------------------------------
     static: default value, this is automatically applied
-    fixed: take the element out of document flow and behaves like inline-block
-    z-index:
-    absolute:
-    relative:
+    fixed: take the element out of document flow and behaves like inline-block, viewport is the parent
+    z-index: default ia auto or 0
+    absolute: if parent has no position applied then parent is html
+    relative: element is not taken out of document flow
     sticky:
     positioning context: top, right, bpttom, left
     stacking context:  

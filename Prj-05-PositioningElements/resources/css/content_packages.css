@@ -1,3 +1,12 @@
+.background-on-packages{
+    background: url("../images/packages-background.jpg");
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    opacity: 0.3; /*0= invisible, 1=fully visible*/
+}
+
 main{
     padding-top: 32px;
 }
@@ -38,7 +47,29 @@ main{
 
 #package_plus{
     background: rgba(213, 255, 220, 0.95);
+    position: relative;
 }
+
+#package_plus .package__badge{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    color: #fff;
+    font-size: 12px;
+    background: #ff5454;
+    padding-bottom: 3px;
+    border-radius: 10px;
+}
+
+#package_plus .package__badge::before,
+#package_plus .package__badge::after {
+    content: "★";
+    color: white;
+    font-size: 1.2em;
+    margin: 0 5px;
+}
+
 
 #package_free{
     background: rgba(234, 252, 237, 0.95);
