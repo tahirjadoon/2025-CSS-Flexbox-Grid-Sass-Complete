@@ -95,6 +95,16 @@ box-shadow
         - 2px → Spread radius (expands the size of the shadow outward)
         -rgba(0, 0, 0, 0.5) → Color (semi-transparent black)
 
+Position
+------------------------------
+    static: default value, this is automatically applied
+    fixed: take the element out of document flow and behaves like inline-block, viewport is the parent
+    z-index: default ia auto or 0
+    absolute: if parent has no position applied then parent is html
+    relative: element is not taken out of document flow
+    sticky:
+    positioning context: top, right, bpttom, left
+    stacking context:  
 
 
 
