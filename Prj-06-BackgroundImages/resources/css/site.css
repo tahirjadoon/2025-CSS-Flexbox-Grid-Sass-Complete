@@ -19,6 +19,8 @@ header.header-main{
     background-color: #2ddf5c;
     width: 100%;
     padding: 8px 16px;
+    top: 0;
+    left: 0;
     position: fixed;
     z-index: 1;
 }

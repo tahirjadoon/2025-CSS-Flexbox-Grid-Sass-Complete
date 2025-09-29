@@ -6,12 +6,17 @@
     margin: 10px;*/
     height: 528px;
     padding: 10px;
+    margin-top: 43px;
+    position: relative;
 }
 
 /*combinators*/
 #product-overview h1{
     color: white;
     font-family: 'Anton', sans-serif;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
 }
 /*Product overview end*/
 
