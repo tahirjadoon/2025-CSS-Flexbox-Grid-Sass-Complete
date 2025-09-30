@@ -33,6 +33,23 @@ border-box: width and height includes the padding and margin
     - Margin still sits outside and is unaffected
     - set it through universal select which is *{} since inheritance will not work if provided with body for the block level elements like section
 
+background
+------------------------------
+    background: [background-color] [background-image] [background-repeat] [background-attachment] [background-position] / [background-size] [background-origin] [background-clip];
+    background: #000 url("../images/freedom.jpg") no-repeat fixed left 10% bottom 20% / cover border-box border-box;
+    background: url("../images/freedom.jpg") no-repeat fixed left 10% bottom 20% / cover border-box border-box;
+
+    | Property              | Value                         | -- | 
+    | background-image      | url("../images/freedom.jpg")  | Loads image | 
+    | background-repeat     | no-repeat                     | repeat, no-repeat, repeat-x, repeat-y | 
+    | background-attachment | fixed                         | fixed, scroll, local | 
+    | background-position   | left 10% bottom 20%           | left top right bottom; 0% 100%; left top, left bottom; left 10% bottom 20%; center; | 
+    | background-size       | cover                         | cover; contain; 100%; 100px | 
+    | background-origin     | border-box                    | border-box; content-box; padding-box | 
+    | background-clip       | border-box                    | padding-box; content-box; border-box; | 
+
+    with background-image, can also apply liner-gradient and radial-gradient as well
+
 display
 ------------------------------
     Basic Display Types
@@ -106,7 +123,22 @@ Position
     positioning context: top, right, bpttom, left
     stacking context:  
 
-
+Filter
+------------------------------
+    filter: blur(4px); Blur the element
+    filter: brightness(1.5); /* 1 = normal, >1 = brighter */ Increase brightness
+    filter: brightness(0.5); Reduce brightness
+    filter: contrast(200%); /* 100% = normal */ Increase contrast
+    filter: grayscale(100%); Grayscale effect
+    filter: sepia(80%); Sepia tone
+    filter: hue-rotate(90deg); Hue rotation
+    filter: invert(100%); Invert colors
+    filter: saturate(200%); Saturate colors
+    filter: drop-shadow(4px 4px 6px #ff5454); Drop shadow (like box-shadow but for images/text)
+    filter: grayscale(50%) brightness(1.2) blur(2px); Combine multiple filters
+    filter: inherit or initial or unset 
+    filter: url("filter.svg#filter-id")
+    filter: contrast(175%) brightness(3%) multiple filters
 
 
 

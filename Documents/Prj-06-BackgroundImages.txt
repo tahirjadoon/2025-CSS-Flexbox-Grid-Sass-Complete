@@ -1,0 +1,2 @@
+Prj-06-BackgroundImages builds on Prj-05-PositioningElements. 
+Copied content from Prj-05-PositioningElements to Prj-06-BackgroundImages
