@@ -1,6 +1,17 @@
 /*Product overview start*/
 #product-overview{
-    background: url("../images/freedom.jpg");
+    /*background: url("../images/freedom.jpg");*/
+    /*background-image: url("../images/freedom.jpg");*/
+    background-image: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url("../images/freedom.jpg");
+    background-color: #ff1b68;
+    background-size: cover; /*cover; contain; 100%; 100px*/
+    background-position: left 10% bottom 20%; /*left top right bottom; 0% 100%; left top, left bottom; left 10% bottom 20%; center; */
+    background-repeat: no-repeat;
+    background-origin: border-box; /*border-box; content-box; padding-box*/
+    background-clip: border-box; /*padding-box; content-box; border-box;*/
+    /*background-attachment: fixed;*/ /*fixed, scroll, local*/
+
+    /*border: 5px dashed red;*/
     width: 100%;
     /*border: 5px black solid;
     margin: 10px;*/
@@ -140,6 +151,9 @@
     border: 2px solid #424242;
     border-radius: 50%;
     margin: 0 auto;
+
+    /*after adding svg*/
+    padding: 20px;
 }
 
 #key-features > ul.key-features__items > li.key-features__item > .key-features__description {

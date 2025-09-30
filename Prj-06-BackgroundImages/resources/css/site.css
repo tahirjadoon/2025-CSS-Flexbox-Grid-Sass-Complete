@@ -35,6 +35,12 @@ header.header-main > div > .header-main__brand{
     color: #0e4f1f;
     font-weight: bold;
     font-size: 22px;
+    height: 23px;
+    display: inline-block;
+}
+
+header.header-main > div > .header-main__brand img{
+    height: 100%;
 }
 
 .nav-main{
