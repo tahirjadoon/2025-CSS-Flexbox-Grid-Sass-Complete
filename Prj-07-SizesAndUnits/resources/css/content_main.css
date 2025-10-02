@@ -16,8 +16,9 @@
     /*border: 5px black solid;
     margin: 10px;*/
     height: 528px;
-    padding: 10px;
-    margin-top: 43px;
+    /*padding: 10px;*/
+    /*margin-top: 43px;*/
+    margin-top: 2.6875rem;
     position: relative;
 }
 
@@ -47,8 +48,10 @@
 #plans > div > article.plan {
     background-color: #d5ffdc;
     text-align: center;
-    padding: 16px;
-    margin: 8px;
+    /*padding: 16px;*/
+    padding: 1rem;
+    /*margin: 8px;*/
+    margin: 0.5rem;
     display: inline-block;
     width: 30%;
     vertical-align: middle;
@@ -65,7 +68,7 @@
 #plans > div > article.plan > .plan__annotation{
     background: #fff;
     color: #19b84c;
-    padding: 8px;
+    padding: 0.5rem; /*8px;*/
     box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.5);
     border-radius: 4px;
 }
@@ -93,7 +96,7 @@
 }
 
 #plans > div > article.plan > ul.plan__features li{
-    margin: 8px 0;
+    margin: 0.5rem 0; /*8px 0;*/
 
 }
 
@@ -102,7 +105,7 @@
     color: #fff;
     font: inherit;
     border: 1.5px solid #0e4f1f;
-    padding: 8px;
+    padding: 0.5rem; /*8px;*/
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
@@ -122,13 +125,13 @@
 /*key-features start*/
 #key-features{
     background: #ff1b68;
-    margin-top: 80px;
-    padding: 16px;;
+    margin-top: 5rem; /*80px;*/
+    padding: 1rem; /*16px;*/
 }
 
 #key-features > .section-title{
     color: #fff;
-    margin: 32px;
+    margin: 2rem; /*32px;*/
 }
 
 #key-features > ul.key-features__items {
@@ -153,14 +156,14 @@
     margin: 0 auto;
 
     /*after adding svg*/
-    padding: 20px;
+    padding: 1.5rem /*20px;*/
 }
 
 #key-features > ul.key-features__items > li.key-features__item > .key-features__description {
     text-align: center;
     font-weight: bold;
     color: #fff;
-    font-size: 20px;
+    font-size: 1.5rem; /*20px;*/
 }
 
 
