@@ -29,7 +29,7 @@ body{
 header.header-main{
     background-color: #2ddf5c;
     width: 100%;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem; /*8px 16px;*/
     top: 0;
     left: 0;
     position: fixed;
@@ -45,8 +45,8 @@ header.header-main > div > .header-main__brand{
     text-decoration: none;
     color: #0e4f1f;
     font-weight: bold;
-    font-size: 22px;
-    height: 23px;
+    font-size: 1.5rem; /*22px;*/
+    height: 1.5rem; /*23px;*/
     display: inline-block;
 }
 
@@ -69,14 +69,14 @@ header.header-main > div > .header-main__brand img{
 
 .nav-main .nav-main__items li{
     display: inline-block; /* Makes list items side by side */
-    margin: 0 16px;
+    margin: 0 1rem; /*0 16px;*/
 }
 
 .nav-main .nav-main__items li a{
     text-decoration: none;
     color: #0e4f1f;
     font-weight: bold;
-    padding: 3px 0;
+    padding: 0.2rem 0; /*3px 0;*/
 }
 
 .nav-main .nav-main__items li a:hover, 
@@ -88,7 +88,7 @@ header.header-main > div > .header-main__brand img{
 .nav-main .nav-main__items li.nav-main__item--cta a{
     color: white;
     background: #ff1b68;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem; /*8px 16px;*/
     border-radius: 8px;
 }
 
@@ -103,8 +103,8 @@ header.header-main > div > .header-main__brand img{
 /*Footer start - using decendant approach and not child*/
 .main-footer{
     background: black;
-    padding: 32px;
-    margin-top: 48px;
+    padding: 2rem; /*32px;*/
+    margin-top: 3rem; /*48px;*/
 }
 
 .main-footer .main-footer__links{
@@ -116,7 +116,7 @@ header.header-main > div > .header-main__brand img{
 
 .main-footer .main-footer__links .main-footer__link {
     display: inline-block;
-    margin: 0 16px;
+    margin: 0 1rem; /*0 16px;*/
 }
 
 .main-footer .main-footer__links .main-footer__link a{
