@@ -140,7 +140,27 @@ Filter
     filter: url("filter.svg#filter-id")
     filter: contrast(175%) brightness(3%) multiple filters
 
+Sizes & Units
+------------------------------
+    Absolute Units
+        These are fixed and do not scale with screen size.
+        px, pt, cm, mm, in, pc  
 
+    Relative Units
+        These scale based on context like font size or viewport.
+        pixel: px
+        percentages: %
+        em: em (calculated based on actual size of element that is inherited from parent and then multiplied by 1.5, compounding with respect to parent)
+        root em: rem (html) (root element, no compunding)
+        viewport width: vw 
+        viewport height: vh 
+        vmin (vw or vh) 
+        vmax (vw or vh)
+        ex (height of lower case x) 
+        ch (width of 0 char) 
 
-
+        Calculated Values
+        You can combine units using calc():
+        width: calc(100% - 20px);
+        font-size: calc(1rem + 0.5vw);
 
