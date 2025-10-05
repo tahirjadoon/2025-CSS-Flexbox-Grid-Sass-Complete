@@ -39,7 +39,7 @@ const uiHelper = {
     el.style.display = this.display[type] ?? type;
   },
 
-  toggleModel(backdrop, modal, show = true, type = this.display.block){
+  toggleModal(backdrop, modal, show = true, type = this.display.block){
     if(!this.isBackDropAndModal(backdrop, modal)) return;
     const displayType = !show ? this.display.none : (this.display[type] ?? type);
     this.setDisplay(backdrop, displayType);
@@ -62,7 +62,7 @@ const uiHelper = {
     if(!this.isElement(el) || !this.isBackDropAndModal(backdrop, modal)) return;
     
     el.addEventListener("click", () => {
-        this.toggleModel(backdrop, modal, false, this.display.none);
+        this.toggleModal(backdrop, modal, false, this.display.none);
     });
   },
 
@@ -70,7 +70,7 @@ const uiHelper = {
     if(!this.isElement(el) || !this.isBackDropAndModal(backdrop, modal)) return;
 
     el.addEventListener("click", () => {
-        this.toggleModel(backdrop, modal, true, this.display.block);
+        this.toggleModal(backdrop, modal, true, this.display.block);
     });
   },
 
@@ -87,7 +87,7 @@ const uiHelper = {
     el.addEventListener("click", (e) => {
         e.preventDefault();
 
-        this.toggleModel(backdrop, modal, false, this.display.none);
+        this.toggleModal(backdrop, modal, false, this.display.none);
 
         if(url){
             setTimeout(() => {
