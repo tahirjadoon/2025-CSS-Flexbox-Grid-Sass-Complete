@@ -6,7 +6,8 @@ const jsSiteCore = {
         grid: "grid",
         inline: "inline",
         inlineBlock: "inline-block",
-        contents: "contents"
+        contents: "contents", 
+        openClass: "open"
     },
 
     get(selector) {
@@ -69,10 +70,12 @@ const jsSiteCore = {
         this.objects.backdrop.addEventListener("click", () => {
             if(this.backdropTargets && this.backdropTargets.length > 0){
                 this.backdropTargets.forEach(target => {
-                    this.setDisplay(target, this.display.none);
+                    //this.setDisplay(target, this.display.none);
+                    this.removeClass(target, this.display.openClass);
                 });
             }
-            this.setDisplay(this.objects.backdrop, this.display.none);
+            //this.setDisplay(this.objects.backdrop, this.display.none);
+            this.removeClass(this.objects.backdrop, this.display.openClass);
         });
     },
 

@@ -189,3 +189,10 @@ li.mobile-nav__item {
   font-size: 1.5rem; /*colors assigned above*/
 }
 /*Mobile-Nav end*/
+
+/*Open class starts*/
+.open,
+.modal.open{
+    display: block;
+}
+/*Close class*/

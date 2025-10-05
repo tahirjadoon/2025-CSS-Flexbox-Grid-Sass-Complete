@@ -34,7 +34,8 @@ const jsModal = {
 
     selectPlanButtons.forEach(button => {
       button.addEventListener("click", () => {
-        this.toggleModal(backdrop, modal, true, jsSiteCore.display.block);
+        //this.toggleModal(backdrop, modal, true, jsSiteCore.display.block);
+        this.toggleModalWithClass(backdrop, modal, true);
       });
     });
   },
@@ -46,7 +47,8 @@ const jsModal = {
     if (!jsSiteCore.isElement(modalNoButton) || !jsSiteCore.isElement(modal)) return;
 
     modalNoButton.addEventListener("click", () => {
-      this.toggleModal(backdrop, modal, false, jsSiteCore.display.none);
+      //this.toggleModal(backdrop, modal, false, jsSiteCore.display.none);
+      this.toggleModalWithClass(backdrop, modal, false);
     });
   },
 
@@ -59,7 +61,8 @@ const jsModal = {
     modalYesButton.addEventListener("click", e => {
       e.preventDefault();
 
-      this.toggleModal(backdrop, modal, false, jsSiteCore.display.none);
+      //this.toggleModal(backdrop, modal, false, jsSiteCore.display.none);
+      this.toggleModalWithClass(backdrop, modal, false);
 
       const url = jsSiteCore.getAttribute(modalYesButton, "href");
       if (url) {
@@ -70,11 +73,23 @@ const jsModal = {
     });
   },
 
-  toggleModal(backdrop, modal, show = true, type = this.display.block){
+  toggleModal(backdrop, modal, show = true, type = jsSiteCore.display.block){
     if(!this.isBackDropAndModal(backdrop, modal)) return;
     const displayType = !show ? jsSiteCore.display.none : (jsSiteCore.display[type] ?? type);
     jsSiteCore.setDisplay(backdrop, displayType);
     jsSiteCore.setDisplay(modal, displayType);
+  },
+
+  toggleModalWithClass(backdrop, modal, show = true){
+    if(!this.isBackDropAndModal(backdrop, modal)) return;
+    if(show){
+      jsSiteCore.addClass(backdrop, jsSiteCore.display.openClass);
+      jsSiteCore.addClass(modal, jsSiteCore.display.openClass);
+    }
+    else{
+      jsSiteCore.removeClass(backdrop, jsSiteCore.display.openClass);
+      jsSiteCore.removeClass(modal, jsSiteCore.display.openClass);
+    }
   },
 
   isBackDropAndModal(backdrop, modal){

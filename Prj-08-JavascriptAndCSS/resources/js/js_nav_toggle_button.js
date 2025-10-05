@@ -29,8 +29,9 @@ const toggleNav = {
         if (!jsSiteCore.isElement(toggleButton) || !jsSiteCore.isElement(mobileNav)) return;
 
         toggleButton.addEventListener("click", () => {
-        jsSiteCore.setDisplay(backdrop, jsSiteCore.display.block);
-        jsSiteCore.setDisplay(mobileNav, jsSiteCore.display.block);
+            //jsSiteCore.setDisplay(backdrop, jsSiteCore.display.block);
+            //jsSiteCore.setDisplay(mobileNav, jsSiteCore.display.block);
+            this.toggleModalWithClass(backdrop, mobileNav, true);
         });
     },
 
@@ -42,11 +43,28 @@ const toggleNav = {
 
         navLinks.forEach(link => {
             link.addEventListener("click", () => {
-                jsSiteCore.setDisplay(backdrop, jsSiteCore.display.none);
-                jsSiteCore.setDisplay(mobileNav, jsSiteCore.display.none);
+                //jsSiteCore.setDisplay(backdrop, jsSiteCore.display.none);
+                //jsSiteCore.setDisplay(mobileNav, jsSiteCore.display.none);
+                this.toggleModalWithClass(backdrop, mobileNav, false);
                 // Redirect is preserved naturally
             });
         });
+    }, 
+
+    toggleModalWithClass(backdrop, mobileNav, show = true){
+        if(!this.isBackDropAndMobileNav(backdrop, mobileNav)) return;
+        if(show){
+            jsSiteCore.addClass(backdrop, jsSiteCore.display.openClass);
+            jsSiteCore.addClass(mobileNav, jsSiteCore.display.openClass);
+        }
+        else{
+            jsSiteCore.removeClass(backdrop, jsSiteCore.display.openClass);
+            jsSiteCore.removeClass(mobileNav, jsSiteCore.display.openClass);
+        }
+    },
+
+    isBackDropAndMobileNav(backdrop, mobileNav){
+        return jsSiteCore.isElement(backdrop) && jsSiteCore.isElement(mobileNav);
     }
 };
 
