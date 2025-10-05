@@ -8,6 +8,9 @@
     <link rel="shortcut icon" href="../resources/images/favicon.png">
     <!--<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">-->
     <link rel="stylesheet" href="../resources/css/site.css">
+    
+    <script src="../resources/js/js_site.js" defer></script>
+    <script src="../resources/js/js_nav_toggle_button.js" defer></script>
 </head>
 
 <body>
@@ -16,6 +19,13 @@
     <!--Header start-->
     <header class="header-main">
         <div>
+             <!--Mobile nav button start-->
+            <button class="nav-toggle-button">
+                <span class="nav-toggle-button__bar"></span>
+                <span class="nav-toggle-button__bar"></span>
+                <span class="nav-toggle-button__bar"></span>
+            </button>
+            <!--Mobile nav button end-->
             <a href="../index.html" class="header-main__brand"><img src="../resources/images/uhost-icon.png" alt="uHost - Your favorite hosting company"></a>
         </div>
         <nav class="nav-main">
@@ -28,6 +38,22 @@
     </header>
     <!--Header end-->
     
+    <!--Mobile nav starts-->
+    <nav class="mobile-nav">
+        <ul class="mobile-nav__items">
+            <li class="mobile-nav__item">
+                <a href="../packages/index.html">Packages</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="../customers/index.html">Customers</a>
+            </li>
+            <li class="mobile-nav__item mobile-nav__item--cta">
+                <a href="../start-hosting/index.html">Start Hosting</a>
+            </li>
+        </ul>
+    </nav>
+    <!--Mobile nav ends-->
+
     <main>
         
     </main>
