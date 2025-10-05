@@ -1,0 +1,2 @@
+Prj-08-JavascriptAndCSS builds on Prj-07-SizesAndUnits. 
+Copied content from Prj-07-SizesAndUnits to Prj-08-JavascriptAndCSS
