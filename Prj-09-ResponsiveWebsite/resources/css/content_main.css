@@ -56,11 +56,10 @@
 
 }
 
-#plans > .plan_list{
-    width: 80%;
-    margin: auto;
+/*#plans > .plan_list{
+    width: 100%;
     text-align: center;
-}
+}*/
 
 #plans > div > article.plan {
     background-color: #d5ffdc;
@@ -68,18 +67,15 @@
     /*padding: 16px;*/
     padding: 1rem;
     /*margin: 8px;*/
-    margin: 0.5rem;
-    display: inline-block;
-    width: 30%;
-    vertical-align: middle;
+    margin: 0.5rem 0;
+    width: 100%;
 }
 
 #plans > div > article.plan--highlighted{
     background-color: #19b84c;
     color: #fff;
-    box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.5);
-    border-radius: 0 0 12px 0;
-
+    /*box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.5);
+    border-radius: 0 0 12px 0;*/
 }
 
 #plans > div > article.plan > .plan__annotation{
@@ -137,6 +133,31 @@
 #plans > div > article.plan .plan__action_button:focus{
     outline: none;
 }
+
+@media (min-width: 40rem){ /*16*40=640px*/
+    #plans > .plan_list{
+        width: 80%;
+        margin: auto;
+    }
+
+    #plans > div > article.plan {
+        margin: 0.5rem;
+        display: inline-block;
+        width: 30%;
+        vertical-align: middle;
+        min-width: 13rem;
+        max-width: 25rem;
+    }
+
+    #plans > div > article.plan--highlighted{
+        box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.5);
+        border-radius: 0 0 12px 0;
+    }
+
+    #plans > div > article.plan > .plan__annotation{
+        font-size: 1.2rem;
+    }
+}
 /*Plans End*/
 
 /*key-features start*/
@@ -159,9 +180,9 @@
 }
 
 #key-features > ul.key-features__items > li.key-features__item {
-    display: inline-block;
-    width: 30%;
-    vertical-align: top;
+    display: block;
+    /*width: 30%;*/
+    /*vertical-align: top;*/
 }
 
 #key-features > ul.key-features__items > li.key-features__item > .key-features__image{
@@ -183,7 +204,14 @@
     font-size: 1.5rem; /*20px;*/
 }
 
-
+@media (min-width: 40rem){ /*16*40=640px*/
+    #key-features > ul.key-features__items > li.key-features__item {
+        display: inline-block;
+        width: 30%;
+        max-width: 25rem;
+        vertical-align: top;
+    }
+}
 /*key-features end*/
 
 /*modal start*/
