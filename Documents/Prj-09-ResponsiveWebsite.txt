@@ -1,0 +1,2 @@
+Prj-09-ResponsiveWebsite builds on Prj-08-JavascriptAndCSS. 
+Copied content from Prj-08-JavascriptAndCSS to Prj-09-ResponsiveWebsite
