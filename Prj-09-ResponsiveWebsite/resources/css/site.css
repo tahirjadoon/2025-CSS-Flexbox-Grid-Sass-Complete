@@ -47,20 +47,17 @@ header.header-main > div > .header-main__brand{
     color: #0e4f1f;
     font-weight: bold;
     font-size: 1.5rem; /*22px;*/
-    height: 1.5rem; /*23px;*/
     display: inline-block;
     vertical-align: middle;
 }
 
 header.header-main > div > .header-main__brand img{
-    height: 100%;
+    /*height: 100%;*/
+    height: 2.5rem;
 }
 
 .nav-main{
-    display: inline-block;
-    text-align: right;
-    width: calc(100% - 123px); /*75px/
-    vertical-align: middle;
+    display: none;
 }
 
 .nav-main .nav-main__items{
@@ -104,6 +101,15 @@ header.header-main > div > .header-main__brand img{
     background: white;
     border: none;
 }
+
+@media (min-width: 40rem){ /*16*40=640px*/
+    .nav-main{
+        display: inline-block;
+        text-align: right;
+        width: calc(100% - 123px); /*75px*/
+        vertical-align: middle;
+    }
+}
 /*Header end*/
 
 /*Footer start - using decendant approach and not child*/
@@ -121,8 +127,8 @@ header.header-main > div > .header-main__brand img{
 }
 
 .main-footer .main-footer__links .main-footer__link {
-    display: inline-block;
-    margin: 0 1rem; /*0 16px;*/
+    display: block;
+    margin: 1rem 0;
 }
 
 .main-footer .main-footer__links .main-footer__link a{
@@ -132,6 +138,13 @@ header.header-main > div > .header-main__brand img{
 .main-footer .main-footer__links .main-footer__link a:hover,
 .main-footer .main-footer__links .main-footer__link a:active{
     color: #ccc;
+}
+
+@media (min-width: 40rem){ /*16*40=640px*/
+    .main-footer .main-footer__links .main-footer__link {
+        display: inline-block;
+        margin: 0 1rem; /*0 16px;*/
+    }
 }
 
 /*Footer end*/
@@ -157,6 +170,12 @@ header.header-main > div > .header-main__brand img{
   background: black;
   display: block;
   margin: 0.6rem 0;
+}
+
+@media (min-width: 40rem){ /*16*40=640px*/
+    .nav-toggle-button {
+        display: none;
+    }
 }
 /*Nav Toggle Button end*/
 
