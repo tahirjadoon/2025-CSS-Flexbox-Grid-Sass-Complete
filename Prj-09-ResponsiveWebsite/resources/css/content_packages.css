@@ -114,3 +114,25 @@ main{
         inset 0 -2px 0 rgba(0, 0, 0, 0.5);        /* inner bottom border */
     border-left-color: #ff5454;
 }
+
+@media(min-width: 40rem){
+    main{
+        margin: 3rem auto;
+        max-width: 1500px;
+    }
+}
+
+@media(min-width: 1500px){
+    .package{
+        border-left: 4px solid #0e4f1f;
+    }
+
+    #package_free{
+        border-right: 4px solid #0e4f1f;
+    }
+
+    #package_free:hover,
+    #package_free:active{
+        border-right-color: #ff5454;
+    }
+}
