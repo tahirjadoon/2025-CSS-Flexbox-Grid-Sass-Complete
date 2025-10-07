@@ -1,11 +1,15 @@
 /*Product overview start*/
 #product-overview{
     /*background: url("../images/freedom.jpg");*/
-    /*background-image: url("../images/freedom.jpg");*/
+    /*
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+    url("../images/freedom.jpg") center/cover no-repeat border-box,
+    #ff1b68;
+    */
     background-image: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url("../images/freedom.jpg");
     background-color: #ff1b68;
     background-size: cover; /*cover; contain; 100%; 100px*/
-    background-position: bottom center; /*left 10% bottom 70%;*/ /*20%;*/ /*left top right bottom; 0% 100%; left top, left bottom; left 10% bottom 20%; center; */
+    background-position: center center; /*left 10% bottom 70%;*/ /*20%;*/ /*left top right bottom; 0% 100%; left top, left bottom; left 10% bottom 20%; center; */
     background-repeat: no-repeat;
     background-origin: border-box; /*border-box; content-box; padding-box*/
     /*background-clip: border-box;*/ /*padding-box; content-box; border-box;*/
@@ -35,7 +39,7 @@
 @media (min-width: 40rem){ /*16*40=640px*/
     #product-overview{
         height: 40vh;
-        background-position: bottom center; /*left 50% bottom 25%;*/
+        background-position: 50% 25%; /*left 50% bottom 25%;*/
     }
 
     #product-overview h1{
