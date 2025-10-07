@@ -164,3 +164,9 @@ Sizes & Units
         width: calc(100% - 20px);
         font-size: calc(1rem + 0.5vw);
 
+Media queries
+------------------------------
+    min-width: means >= specified width 
+    max-width: means <= soecified width
+
+    breaking points: https://www.mydevice.io/#compare-devices

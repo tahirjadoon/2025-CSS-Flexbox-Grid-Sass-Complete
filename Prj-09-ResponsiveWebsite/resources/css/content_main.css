@@ -29,7 +29,31 @@
     position: absolute;
     bottom: 5%;
     left: 3%;
+    font-size: 1.6rem;
 }
+
+@media (min-width: 40rem){ /*16*40=640px*/
+    #product-overview{
+        height: 40vh;
+        background-position: left 50% bottom 25%;
+    }
+
+    #product-overview h1{
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 60rem){ /*16*60=960px*/
+    #product-overview{
+        height: 60vh;
+        background-position: left 80% bottom 25%;
+    }
+
+    #product-overview h1{
+        font-size: 5rem;
+    }
+}
+
 /*Product overview end*/
 
 /*Plans Start */
