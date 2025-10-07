@@ -11,6 +11,11 @@ body{
     overflow-x: hidden; /*scroll bars apeared on windows browser after applying vh and vw*/
 }
 
+main{
+    min-height: calc(100vh - 2.6875rem - 8rem) ;
+    margin-top: 2.6875rem;
+}
+
 .clearfix{
     clear: both;
 }
