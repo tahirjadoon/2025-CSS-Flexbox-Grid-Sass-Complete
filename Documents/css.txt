@@ -168,5 +168,6 @@ Media queries
 ------------------------------
     min-width: means >= specified width 
     max-width: means <= soecified width
+    orientation: portrait or landscape
 
     breaking points: https://www.mydevice.io/#compare-devices
