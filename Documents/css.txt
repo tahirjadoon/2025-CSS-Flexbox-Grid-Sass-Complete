@@ -171,3 +171,12 @@ Media queries
     orientation: portrait or landscape
 
     breaking points: https://www.mydevice.io/#compare-devices
+
+Attribute selector
+------------------------------
+[lang~="en-us"] Space seperated list like class, matched en-us 
+[lang|="en"]    hyphen seperated list matches en or en-  
+[lang^="#"]     Starts with match matches #de 
+[lang$="de"]    ends with, matches ab.de
+[lang*="cdn"]   contains selector
+[lang*="cdn" i]   contains selector case in sensitive

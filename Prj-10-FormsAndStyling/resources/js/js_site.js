@@ -22,9 +22,24 @@ const jsSiteCore = {
         return els;
     },
 
+    hasAttribute(el, attribute){
+        if(!this.isElement(el)) return false;
+        return el.hasAttribute(attribute);
+    },
+
     getAttribute(el, attribute){
-        if(!this.isElement(el)) return;
+        if(!this.isElement(el)) return "";
         return el.getAttribute(attribute);
+    },
+
+    setAttribute(el, attribute, value){
+        if(!this.isElement(el)) return;
+        el.setAttribute(attribute, value);
+    },
+
+    removeAttribute(el, attribute){
+        if(!this.isElement(el)) return;
+        el.removeAttribute(attribute);
     },
 
     isElement(el) {
