@@ -43,6 +43,14 @@ main{
     font-size: 1.25rem;
     color: #0e4f1f;
     background: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold; /* 700;*/
+    /*letter-spacing: 5px;*/
+    white-space: normal; /*nowrap, pre, pre-wrap, pre-line*/
+    line-height: 2;
+    text-decoration: underline dotted red;
+    /*offset-x offset-y blur-radius color*/
+    text-shadow: 0px 2px 7px black;
 }
 
 #package_premium .package__title{
