@@ -180,3 +180,49 @@ Attribute selector
 [lang$="de"]    ends with, matches ab.de
 [lang*="cdn"]   contains selector
 [lang*="cdn" i]   contains selector case in sensitive
+
+Flexbox
+------------------------------
+display: flex
+        - Activates Flexbox layout on the container.
+        - All direct children become flex items.
+
+flex-direction [Controls the main axis (the direction items flow).]
+        row: default, items flow left to right
+        row-reverse: items flow right to left
+        column: items flow top to bottom
+        column-reverse: items flow bottom to top
+
+justify-content [Aligns items along the main axis (horizontal if row, vertical if column)]
+        flex-start: default, items align to the start of the main axis
+        flex-end: items align to the end of the main axis
+        center: items centered along the main axis 
+        space-between: items are centered along the main axis 
+        space-around: items have equal space around them
+        space-evenly: items have equal space between and around them
+
+
+align-items [Aligns items along the cross axis (perpendicular to flex-direction).]
+        flex-start: items align to the top (row) or left (column)
+        flex-end: items align to the bottom or right
+        center: items are centered vertically (if row)
+        baseline: items align based on their text baseline
+        stretch: Default, items stretch to fill the container height
+
+flex-wrap [Controls whether items wrap when they overflow.]
+        nowrap: default, items stay on one line
+        wrap: items wrap to the next line if needed 
+        wrap-reverse: items wrap in reverse direction
+
+align-content [Aligns multiple lines of items (only works when flex-wrap is active).]
+        flex-start: lines align to the top
+        flex-end: lines align to the bottom
+        center: lines are centered vertically
+        space-between: lines have equal gaps between them 
+        space-around: lines have equal space around them
+        space-evenly: lines have equal space between and around
+        stretch: default, lines stretch to fill container height
+
+column-gap and row-gap
+        - Adds spacing between columns and rows.
+        - Works with flex-wrap and align-content.
