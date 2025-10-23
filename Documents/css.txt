@@ -210,7 +210,7 @@ align-items [Aligns items along the cross axis (perpendicular to flex-direction)
         stretch: Default, items stretch to fill the container height
 
 flex-wrap [Controls whether items wrap when they overflow.]
-        nowrap: default, items stay on one line
+        nowrap: default, items stay on one line, if total width exceeds the container, items will shrink even when width is applied to individual items
         wrap: items wrap to the next line if needed 
         wrap-reverse: items wrap in reverse direction
 
