@@ -149,12 +149,16 @@ header.header-main > div > .header-main__brand img{
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    /*text-align: center;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-footer .main-footer__links .main-footer__link {
-    display: block;
-    margin: 1rem 0;
+    /*display: block;*/
+    margin: 0.5rem 0;
 }
 
 .main-footer .main-footer__links .main-footer__link a{
@@ -167,8 +171,11 @@ header.header-main > div > .header-main__brand img{
 }
 
 @media (min-width: 40rem){ /*16*40=640px*/
+    .main-footer .main-footer__links{
+        flex-direction: row;
+    }
     .main-footer .main-footer__links .main-footer__link {
-        display: inline-block;
+        /*display: inline-block;*/
         margin: 0 1rem; /*0 16px;*/
     }
 }
