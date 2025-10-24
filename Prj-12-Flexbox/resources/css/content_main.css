@@ -216,11 +216,21 @@
 }
 
 @media (min-width: 40rem){ /*16*40=640px*/
+    #key-features > ul.key-features__items{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
     #key-features > ul.key-features__items > li.key-features__item {
-        display: inline-block;
+        /*display: inline-block;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 30%;
         max-width: 25rem;
-        vertical-align: top;
+        /*vertical-align: top;*/
     }
 }
 /*key-features end*/
