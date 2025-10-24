@@ -125,6 +125,7 @@ main{
 
 @media(min-width: 40rem){
     main{
+        padding-top: 3.5rem;
         margin-left: auto;
         margin: auto;
         max-width: 1500px;
