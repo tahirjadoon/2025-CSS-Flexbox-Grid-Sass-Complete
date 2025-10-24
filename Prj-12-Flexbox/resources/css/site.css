@@ -221,9 +221,14 @@ header.header-main > div > .header-main__brand img{
   width: 90%;
   height: 100%;
   list-style: none;
-  margin: 10% auto;
+  /*margin: 10% auto;*/
+  margin: 0% auto;
   padding: 0;
-  text-align: center;
+  /*text-align: center;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 li.mobile-nav__item {
