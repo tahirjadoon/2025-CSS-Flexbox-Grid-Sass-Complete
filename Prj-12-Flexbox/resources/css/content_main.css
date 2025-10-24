@@ -136,22 +136,33 @@
 
 @media (min-width: 40rem){ /*16*40=640px*/
     #plans > .plan_list{
-        width: 80%;
-        margin: auto;
+        /*width: 80%;*/
+        /*margin: auto;*/
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
     }
 
     #plans > div > article.plan {
-        margin: 0.5rem;
-        display: inline-block;
+        /*margin: 0.5rem;*/
+        /*display: inline-block;*/
         width: 30%;
-        vertical-align: middle;
+        height: 28rem;
+        /*vertical-align: middle;*/
         min-width: 13rem;
         max-width: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
 
     #plans > div > article.plan--highlighted{
         box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.5);
         border-radius: 0 0 12px 0;
+        height: 30rem;
+        z-index: 50;
     }
 
     #plans > div > article.plan > .plan__annotation{
