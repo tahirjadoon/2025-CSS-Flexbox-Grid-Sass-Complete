@@ -6,15 +6,28 @@
     box-sizing: border-box; /*see css.txt, adding it here since in body it will not work for block level elements like section */
 }
 
+html{
+    height: 100%;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
     margin: 0; 
-    overflow-x: hidden; /*scroll bars apeared on windows browser after applying vh and vw*/
+    /*overflow-x: hidden;*/ /*scroll bars apeared on windows browser after applying vh and vw*/
+
+    height: 100%;
+    display: grid;
+    grid-template-rows: 3.5rem auto 8rem;
+    grid-template-areas: "header"
+                        "main"
+                        "footer";
+
 }
 
 main{
-    min-height: calc(100vh - 2.6875rem - 8rem) ;
-    margin-top: 2.6875rem;
+    /*min-height: calc(100vh - 2.6875rem - 8rem) ;*/
+    /*margin-top: 2.6875rem;*/
+    grid-area: main;
 }
 
 .clearfix{
@@ -45,6 +58,8 @@ header.header-main{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    grid-area: header;
 }
 
 header.header-main > div { /*direct child*/
@@ -143,6 +158,8 @@ header.header-main > div > .header-main__brand img{
     background: black;
     padding: 2rem; /*32px;*/
     margin-top: 3rem; /*48px;*/
+
+    grid-area: footer;
 }
 
 .main-footer .main-footer__links{
