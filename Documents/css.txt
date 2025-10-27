@@ -226,3 +226,8 @@ align-content [Aligns multiple lines of items (only works when flex-wrap is acti
 column-gap and row-gap
         - Adds spacing between columns and rows.
         - Works with flex-wrap and align-content.
+
+CSS Grid
+------------------------------
+    positioning the items
+    Only direct children are cnsidered part of the grid

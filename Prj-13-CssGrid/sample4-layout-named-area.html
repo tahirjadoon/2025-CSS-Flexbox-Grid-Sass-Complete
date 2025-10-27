@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Grid Demo 3 - Layout with Named Area</title>
+  <style>
+
+    html{height: 100%;}
+
+    body{height: 100%;
+      display: grid;
+      grid-template-rows: auto 1fr; /* explain takes natural height, layout fills the rest */
+    }
+
+    .explain{
+      margin: 20px;
+    }
+
+    .layout{margin: 20px; height: 100%;
+      display: grid;
+      grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: [col-1-start] 1fr [col-1-end col-2-start] 3fr [col-2-end]; /*2 column layout*/
+      grid-template-rows: 4.5rem auto 4.5rem;
+      gap: 0;
+    }
+
+    header{background: blue; color: #fff;
+      grid-area: header;
+    }
+
+    main{ background: red; color: #fff;
+      grid-area: main;
+    }
+
+    aside{ background: green; color: #fff;
+      grid-area: sidebar;
+    }
+
+    footer{ background: purple; color: #fff;
+      grid-area: footer;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <div class="explain">
+    <table>
+      <thead>
+        <td><strong>Row</strong></td>
+        <td><strong>Column 1</strong></td>
+        <td><strong>Column 2</strong></td>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>header</td>
+        <td>header</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>sidebar</td>
+        <td>main</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>footer</td>
+        <td>footer</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="layout">
+    <header>Header</header>
+    <main>Main Content</main>
+    <aside>Sidebar</aside>
+    <footer>Footer</footer>
+  </div>
+  
+</body>
+</html>
