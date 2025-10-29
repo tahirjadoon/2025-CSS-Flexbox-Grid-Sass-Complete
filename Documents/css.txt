@@ -231,3 +231,43 @@ CSS Grid
 ------------------------------
     positioning the items
     Only direct children are cnsidered part of the grid
+
+    Grid
+        display: grid
+        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+                                repeat(4, 25%)
+                                [col-1-start] 1fr [col-1-end col-2-start]3fr [col-2-end];
+                                [col-1-start] 1fr [col-1-end col-2-start] 3fr [col-2-end];		
+                                repeat(auto-fill, 10rem);						 
+                                repeat(auto-fit, 10rem);
+        grid-template-rows: auto;
+                            5rem minmax(10px, 200px) 100px;
+                            4.5rem auto 4.5rem;
+                            4.5rem auto 4.5rem;
+                            3.5rem auto fit-content(8rem);
+        grid-template-areas: 
+                "header header"
+                "sidebar main"
+                "footer footer";
+        justify-items: center, start, end, stretch elements at the grid level along x-axis
+        align-items: center, start, end, stretch elements at the grid level along y-axis
+        justify-content: center, start, end, stretch along x-axis
+        align-content: center, start, end, stretch along y-axis 
+        grid-gap: 1.5rem;
+        grid-auto-rows: 12rem; /*default = auto; minmax(8rem, auto)*/
+        grid-auto-flow: column; /*default= row*/
+        grid-auto-columns: 5rem;
+			
+    Elements
+        grid-column-start: 3;
+                            col-1-start;
+        grid-column-end: span 2;
+                            col-2-end;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-area: header;
+                    main;
+			sidebar;
+			footer;
+justify-self: center, start, end, stretch along x-axis
+align-self
