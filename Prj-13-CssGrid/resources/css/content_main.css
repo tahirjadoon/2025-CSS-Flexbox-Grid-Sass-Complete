@@ -1,0 +1,287 @@
+/*Product overview start*/
+#product-overview{
+    /*background: url("../images/freedom.jpg");*/
+    /*
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+    url("../images/freedom.jpg") center/cover no-repeat border-box,
+    #ff1b68;
+    */
+    background-image: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url("../images/freedom.jpg");
+    background-color: #ff1b68;
+    background-size: cover; /*cover; contain; 100%; 100px*/
+    background-position: center center; /*left 10% bottom 70%;*/ /*20%;*/ /*left top right bottom; 0% 100%; left top, left bottom; left 10% bottom 20%; center; */
+    background-repeat: no-repeat;
+    background-origin: border-box; /*border-box; content-box; padding-box*/
+    /*background-clip: border-box;*/ /*padding-box; content-box; border-box;*/
+    /*background-attachment: fixed;*/ /*fixed, scroll, local*/
+
+    /*border: 5px dashed red;*/
+    width: 100vw; /*100%;*/
+    /*border: 5px black solid;
+    margin: 10px;*/
+    height: 33vh; /*528px;*/
+    /*padding: 10px;*/
+    /*margin-top: 43px;*/
+    /*margin-top: 2.6875rem;*/
+    position: relative;
+}
+
+/*combinators*/
+#product-overview h1{
+    color: white;
+    font-family: 'Anton', sans-serif;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    font-size: 1.6rem;
+}
+
+@media (min-width: 40rem){ /*16*40=640px*/
+    #product-overview{
+        height: 40vh;
+        background-position: 50% 25%; /*left 50% bottom 25%;*/
+    }
+
+    #product-overview h1{
+        font-size: 3rem;
+    }
+}
+
+/*Product overview end*/
+
+/*Plans Start */
+.section-title{
+    color: #2ddf5c;
+    text-align: center;
+
+}
+
+/*#plans > .plan_list{
+    width: 100%;
+    text-align: center;
+}*/
+
+#plans > div > article.plan {
+    background-color: #d5ffdc;
+    text-align: center;
+    /*padding: 16px;*/
+    padding: 1rem;
+    /*margin: 8px;*/
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+#plans > div > article.plan--highlighted{
+    background-color: #19b84c;
+    color: #fff;
+    /*box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.5);
+    border-radius: 0 0 12px 0;*/
+}
+
+#plans > div > article.plan > .plan__annotation{
+    background: #fff;
+    color: #19b84c;
+    padding: 0.5rem; /*8px;*/
+    box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+#plans > div > article.plan > .plan__title{
+    color: #0e4f1f;
+}
+
+#plans > div > article.plan > .plan__price{
+    color: #858585;
+}
+
+#plans > div > article.plan--highlighted > .plan__title{
+    color: #fff;
+}
+
+#plans > div > article.plan--highlighted > .plan__price{
+    color: #0e4f1f;
+}
+
+#plans > div > article.plan > ul.plan__features{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#plans > div > article.plan > ul.plan__features li{
+    margin: 0.5rem 0; /*8px 0;*/
+
+}
+
+#plans > div > article.plan .plan__action_button{
+    background-color: #0e4f1f;
+    color: #fff;
+    font: inherit;
+    border: 1.5px solid #0e4f1f;
+    padding: 0.5rem; /*8px;*/
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#plans > div > article.plan .plan__action_button:active,
+#plans > div > article.plan .plan__action_button:hover{
+    background: #fff;
+    color: #0e4f1f;
+}
+
+#plans > div > article.plan .plan__action_button:focus{
+    outline: none;
+}
+
+@media (min-width: 40rem){ /*16*40=640px*/
+    #plans > .plan_list{
+        /*width: 80%;*/
+        /*margin: auto;*/
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+    }
+
+    #plans > div > article.plan {
+        /*margin: 0.5rem;*/
+        /*display: inline-block;*/
+        width: 30%;
+        height: 28rem;
+        /*vertical-align: middle;*/
+        min-width: 13rem;
+        max-width: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #plans > div > article.plan--highlighted{
+        box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.5);
+        border-radius: 0 0 12px 0;
+        height: 30rem;
+        z-index: 50;
+    }
+
+    #plans > div > article.plan > .plan__annotation{
+        font-size: 1.2rem;
+    }
+}
+/*Plans End*/
+
+/*key-features start*/
+#key-features{
+    background: #ff1b68;
+    margin-top: 5rem; /*80px;*/
+    padding: 1rem; /*16px;*/
+}
+
+#key-features > .section-title{
+    color: #fff;
+    margin: 2rem; /*32px;*/
+}
+
+#key-features > ul.key-features__items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#key-features > ul.key-features__items > li.key-features__item {
+    display: block;
+    /*width: 30%;*/
+    /*vertical-align: top;*/
+}
+
+#key-features > ul.key-features__items > li.key-features__item > .key-features__image{
+    background: #ffcede;
+    width: 128px;
+    height: 128px;
+    border: 2px solid #424242;
+    border-radius: 50%;
+    margin: 0 auto;
+
+    /*after adding svg*/
+    padding: 1.5rem /*20px;*/
+}
+
+#key-features > ul.key-features__items > li.key-features__item > .key-features__description {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5rem; /*20px;*/
+}
+
+@media (min-width: 40rem){ /*16*40=640px*/
+    #key-features > ul.key-features__items{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
+    #key-features > ul.key-features__items > li.key-features__item {
+        /*display: inline-block;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        max-width: 25rem;
+        /*vertical-align: top;*/
+    }
+}
+/*key-features end*/
+
+/*modal start*/
+.modal {
+  position: fixed;
+  display: none;
+  z-index: 200;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.modal__title {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+  text-align: center;
+}
+
+.modal__action {
+  border: 1px solid #0e4f1f;
+  background: #0e4f1f;
+  text-decoration: none;
+  color: white;
+  font: inherit;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+  background: #2ddf5c;
+  border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+  background: red;
+  border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+  background: #ff5454;
+  border-color: #ff5454;
+}
+/*modal end*/

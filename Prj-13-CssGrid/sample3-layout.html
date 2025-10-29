@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Grid Demo 3 - Layout</title>
+  <style>
+
+    html{height: 100%;}
+
+    body{margin: 20px; height: 100%;
+      display: grid;
+      grid-template-columns: [col-1-start] 1fr [col-1-end col-2-start]3fr [col-2-end]; /*2 column layout*/
+      grid-template-rows: 4.5rem auto 4.5rem;
+    }
+
+    header{background: blue; color: #fff;
+      grid-column-start: col-1-start;
+      grid-column-end: col-2-end;
+    }
+
+    main{ background: red; color: #fff;
+      grid-column-start: col-2-start;
+      grid-column-end: span 1; /*not needed since it is a 2 column layout*/
+    }
+
+    aside{ background: green; color: #fff;
+      grid-column-start: col-1-start;
+      grid-row-start: 2;
+      grid-row-end: span 1; /*not needed since it is a 2 column layout*/
+    }
+
+    footer{ background: purple; color: #fff;
+      grid-column-start: col-1-start;
+      grid-column-end: col-2-end;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <header>Header</header>
+  <main>Main Content</main>
+  <aside>Sidebar</aside>
+  <footer>Footer</footer>
+</body>
+</html>
