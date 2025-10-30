@@ -268,5 +268,8 @@ li.mobile-nav__item {
 .open,
 .modal.open{
     display: block;
+    
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 /*Close class*/

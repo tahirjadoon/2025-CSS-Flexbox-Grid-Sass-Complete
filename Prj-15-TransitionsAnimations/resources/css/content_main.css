@@ -122,12 +122,26 @@
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+
+    /*Add transition for smooth hover effect */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.5s ease-in-out; /*cubic-bezier(0.25, 0.8, 0.5, 1)*/
+
+}
+
+@keyframes pulse-scale {
+  0%   { transform: scale(1); }     /* Start at normal size */
+  50%  { transform: scale(1.05); }  /* Grow to 105% at halfway point */
+  100% { transform: scale(1); }     /* Return to normal size */
 }
 
 #plans > div > article.plan .plan__action_button:active,
 #plans > div > article.plan .plan__action_button:hover{
     background: #fff;
     color: #0e4f1f;
+
+    /*Slight size increase */
+     /* transform: scale(1.05); */
+     animation: pulse-scale 2s ease-out;
 }
 
 #plans > div > article.plan .plan__action_button:focus{
@@ -238,7 +252,11 @@
 /*modal start*/
 .modal {
   position: fixed;
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  transform: translateY(-3rem);
+  transition: opacity 2s ease-out, transform 5s ease-out;
+
   z-index: 200;
   top: 20%;
   left: 30%;
