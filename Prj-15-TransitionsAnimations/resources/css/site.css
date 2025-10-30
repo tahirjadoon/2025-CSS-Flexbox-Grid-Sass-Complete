@@ -231,7 +231,9 @@ header.header-main > div > .header-main__brand img{
 
 /*Mobile-Nav start*/
 .mobile-nav {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+
   position: fixed;
   z-index: 101;
   top: 0;
@@ -239,6 +241,13 @@ header.header-main > div > .header-main__brand img{
   background: white;
   width: 80%;
   height: 100vh;
+
+  /* Key Change 1: Initially move the nav completely off-screen to the left */
+  transform: translateX(-100%);
+  
+  /* Key Change 2: Apply transition to both transform and opacity */
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  /* transition: transform 300ms ease-out; */
 }
 
 .mobile-nav__items {
@@ -265,7 +274,12 @@ li.mobile-nav__item {
 /*Mobile-Nav end*/
 
 /*Open class starts*/
-.open,
+.mobile-nav.open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.open:not(.mobile-nav),
 .modal.open{
     display: block;
     
