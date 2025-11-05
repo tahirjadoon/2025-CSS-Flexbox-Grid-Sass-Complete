@@ -13,18 +13,24 @@ html{
 }
 
 body{
+    /*overflow-x: hidden;*/ /*scroll bars apeared on windows browser after applying vh and vw*/
     font-family: 'Montserrat', sans-serif;
     margin: 0; 
-    /*overflow-x: hidden;*/ /*scroll bars apeared on windows browser after applying vh and vw*/
-
-    height: 100%;
-    display: grid;
-    grid-template-rows: 3.5rem auto fit-content(8rem);
-    grid-template-areas: "header"
-                        "main"
-                        "footer";
-
+    padding-top: 3.5rem;
 }
+
+@supports(display: grid){
+    body{
+        height: 100%;
+        display: grid;
+        grid-template-rows: 3.5rem auto fit-content(8rem);
+        grid-template-areas: "header"
+                            "main"
+                            "footer";
+        padding-top: 0rem;
+    }
+}
+
 
 main{
     /*min-height: calc(100vh - 2.6875rem - 8rem) ;*/
