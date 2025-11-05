@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@import url('site-common.css');
+
+*{
+    box-sizing: border-box; /*see css.txt, adding it here since in body it will not work for block level elements like section */
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    /*overflow-x: hidden;*/ /*scroll bars apeared on windows browser after applying vh and vw*/
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; 
+    padding-top: 3.5rem;
+}
+
+@supports(display: grid){
+    body{
+        height: 100%;
+        display: grid;
+        grid-template-rows: 3.5rem auto fit-content(8rem);
+        grid-template-areas: "header"
+                            "main"
+                            "footer";
+        padding-top: 0rem;
+    }
+}
+
+
+main{
+    /*min-height: calc(100vh - 2.6875rem - 8rem) ;*/
+    /*margin-top: 2.6875rem;*/
+    grid-area: main;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.backdrop{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw; /*100%;*/
+    height: 100vh; /*100%;*/
+    background: var(--black-overlay-color); /*rgba(0,0,0,0.5);*/
+}
+
+/*Header start*/
+header.header-main{
+    background-color: var(--header-main-background-color, #2ddf5c); /*#2ddf5c;*/ /*var with fall back*/
+    width: 100%;
+    padding: 0.5rem 1rem; /*8px 16px;*/
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 60;
+
+    /*Search: what css to prefix for more detail*/
+    /*or search autoprefixer*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    grid-area: header;
+}
+
+header.header-main > div { /*direct child*/
+    /*display: inline-block;
+    vertical-align: middle;*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header.header-main > div > .header-main__brand{
+    text-decoration: none;
+    color: var(--header-main-brannd-color); /*#0e4f1f;*/
+    font-weight: bold;
+    /*height: 2.5rem;*/
+    /*display: inline-block;
+    vertical-align: middle;*/
+}
+
+header.header-main > div > .header-main__brand img{
+    /*height: 100%;*/
+    height: 2.5rem;
+    vertical-align: middle;
+}
+
+.nav-main{
+    display: none;
+}
+
+.nav-main .nav-main__items{
+    list-style: none;       /* Removes bullets */
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+}
+
+.nav-main .nav-main__items li{
+    /*display: inline-block;*/ /* Makes list items side by side */
+    margin: 0 1rem; /*0 16px;*/
+}
+
+.nav-main .nav-main__items li a,
+.mobile-nav__item a {
+    text-decoration: none;
+    color: var(--header-main-brannd-color); /*#0e4f1f;*/
+    font-weight: bold;
+    padding: 0.2rem 0; /*3px 0;*/
+}
+
+.nav-main .nav-main__items li a:hover, 
+.nav-main .nav-main__items li a:active{
+    color: var(--white-color); /*white;*/
+    border-bottom: 5px solid var(--white-color) /*white;*/
+}
+
+/*KeyFrames for the cta button in the nav*/
+/*
+@keyframes wiggle1{
+    from{ transform: rotateZ(-10deg); }
+    to{ transform: rotateZ(10deg); }
+}
+*/
+
+@keyframes wiggle2{
+    0%{ transform: rotateZ(0); }
+    50%{ transform: rotateZ(-10deg); }
+    100%{ transform: rotateZ(10deg); }
+}
+
+.nav-main .nav-main__items li.nav-main__item--cta{
+    /*animation: wiggle1 200ms 3s 8 alternate;*/ /*name duration delay numberOfTimesItWillPlay whattodoaftereachanimation*/
+    animation: wiggle2 400ms 3s 8 ease-out none;
+}
+
+.nav-main .nav-main__items li.nav-main__item--cta a,
+.mobile-nav__item--cta a{
+    color: var(--white-color); /*white;*/
+    background: var(--nav-cta-color, #ff1b68); /*#ff1b68;*/
+    padding: 0.5rem 1rem; /*8px 16px;*/
+    border-radius: 8px;
+}
+
+.nav-main .nav-main__items li.nav-main__item--cta a:hover, 
+.nav-main .nav-main__items li.nav-main__item--cta a:active,
+.mobile-nav__item--cta a:hover, 
+.mobile-nav__item--cta a:active{
+    color: var(--nav-cta-color, #ff1b68); /*#ff1b68;*/
+    background:  var(--white-color); /*white;*/
+    border: none;
+}
+
+@media (min-width: 40rem){ /*16*40=640px*/
+    header.header-main > div{
+        width: auto;
+    }
+    .nav-main{
+        /*display: inline-block;
+        text-align: right;*/
+        /*width: calc(100% - 123px);*/ /*75px*/
+        /*vertical-align: middle;*/
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+    }
+    
+}
+/*Header end*/
+
+/*Footer start - using decendant approach and not child*/
+.main-footer{
+    background: var(--black-color); /*black;*/
+    padding: 2rem; /*32px;*/
+    margin-top: 3rem; /*48px;*/
+
+    grid-area: footer;
+}
+
+.main-footer .main-footer__links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /*text-align: center;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-footer .main-footer__links .main-footer__link {
+    /*display: block;*/
+    margin: 0.5rem 0;
+}
+
+.main-footer .main-footer__links .main-footer__link a{
+    color: var(--white-color); /*#fff;*/
+}
+
+.main-footer .main-footer__links .main-footer__link a:hover,
+.main-footer .main-footer__links .main-footer__link a:active{
+    color: var(--footer-hover); /*#ccc;*/
+}
+
+@media (min-width: 40rem){ /*16*40=640px*/
+    .main-footer .main-footer__links{
+        flex-direction: row;
+    }
+    .main-footer .main-footer__links .main-footer__link {
+        /*display: inline-block;*/
+        margin: 0 1rem; /*0 16px;*/
+    }
+}
+
+/*Footer end*/
+
+/*Nav Toggle Button start*/
+.nav-toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.nav-toggle-button:focus {
+  outline: none;
+}
+
+.nav-toggle-button__bar {
+  width: 100%;
+  height: 0.2rem;
+  background: var(--black-color); /*black;*/
+  display: block;
+  margin: 0.6rem 0;
+}
+
+@media (min-width: 40rem){ /*16*40=640px*/
+    .nav-toggle-button {
+        display: none;
+    }
+}
+/*Nav Toggle Button end*/
+
+/*Mobile-Nav start*/
+.mobile-nav {
+  /* display: none; */
+  opacity: 0;
+
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: var(--white-color); /*white;*/
+  width: 80%;
+  height: 100vh;
+
+  /* Key Change 1: Initially move the nav completely off-screen to the left */
+  transform: translateX(-100%);
+  
+  /* Key Change 2: Apply transition to both transform and opacity */
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  /* transition: transform 300ms ease-out; */
+}
+
+.mobile-nav__items {
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  /*margin: 10% auto;*/
+  margin: 0% auto;
+  padding: 0;
+  /*text-align: center;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li.mobile-nav__item {
+  margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+  font-size: 1.5rem; /*colors assigned above*/
+}
+/*Mobile-Nav end*/
+
+/*Open class starts*/
+.mobile-nav.open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.open:not(.mobile-nav),
+.modal.open{
+    display: block;
+    
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+/*Close class*/
+
