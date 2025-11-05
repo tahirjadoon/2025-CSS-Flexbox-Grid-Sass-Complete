@@ -57,6 +57,11 @@ header.header-main{
     position: fixed;
     z-index: 60;
 
+    /*Search: what css to prefix for more detail*/
+    /*or search autoprefixer*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: space-between;
