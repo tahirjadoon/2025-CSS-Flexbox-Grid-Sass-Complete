@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+@import url('site-common.css');
+
 *{
     box-sizing: border-box; /*see css.txt, adding it here since in body it will not work for block level elements like section */
 }
@@ -42,12 +44,12 @@ main{
     z-index: 100;
     width: 100vw; /*100%;*/
     height: 100vh; /*100%;*/
-    background: rgba(0,0,0,0.5);
+    background: var(--black-overlay-color); /*rgba(0,0,0,0.5);*/
 }
 
 /*Header start*/
 header.header-main{
-    background-color: #2ddf5c;
+    background-color: var(--header-main-background-color, #2ddf5c); /*#2ddf5c;*/ /*var with fall back*/
     width: 100%;
     padding: 0.5rem 1rem; /*8px 16px;*/
     top: 0;
@@ -73,7 +75,7 @@ header.header-main > div { /*direct child*/
 
 header.header-main > div > .header-main__brand{
     text-decoration: none;
-    color: #0e4f1f;
+    color: var(--header-main-brannd-color); /*#0e4f1f;*/
     font-weight: bold;
     /*height: 2.5rem;*/
     /*display: inline-block;
@@ -107,15 +109,15 @@ header.header-main > div > .header-main__brand img{
 .nav-main .nav-main__items li a,
 .mobile-nav__item a {
     text-decoration: none;
-    color: #0e4f1f;
+    color: var(--header-main-brannd-color); /*#0e4f1f;*/
     font-weight: bold;
     padding: 0.2rem 0; /*3px 0;*/
 }
 
 .nav-main .nav-main__items li a:hover, 
 .nav-main .nav-main__items li a:active{
-    color: white;
-    border-bottom: 5px solid white;
+    color: var(--white-color); /*white;*/
+    border-bottom: 5px solid var(--white-color) /*white;*/
 }
 
 /*KeyFrames for the cta button in the nav*/
@@ -139,8 +141,8 @@ header.header-main > div > .header-main__brand img{
 
 .nav-main .nav-main__items li.nav-main__item--cta a,
 .mobile-nav__item--cta a{
-    color: white;
-    background: #ff1b68;
+    color: var(--white-color); /*white;*/
+    background: var(--nav-cta-color, #ff1b68); /*#ff1b68;*/
     padding: 0.5rem 1rem; /*8px 16px;*/
     border-radius: 8px;
 }
@@ -149,8 +151,8 @@ header.header-main > div > .header-main__brand img{
 .nav-main .nav-main__items li.nav-main__item--cta a:active,
 .mobile-nav__item--cta a:hover, 
 .mobile-nav__item--cta a:active{
-    color: #ff1b68;
-    background: white;
+    color: var(--nav-cta-color, #ff1b68); /*#ff1b68;*/
+    background:  var(--white-color); /*white;*/
     border: none;
 }
 
@@ -174,7 +176,7 @@ header.header-main > div > .header-main__brand img{
 
 /*Footer start - using decendant approach and not child*/
 .main-footer{
-    background: black;
+    background: var(--black-color); /*black;*/
     padding: 2rem; /*32px;*/
     margin-top: 3rem; /*48px;*/
 
@@ -198,12 +200,12 @@ header.header-main > div > .header-main__brand img{
 }
 
 .main-footer .main-footer__links .main-footer__link a{
-    color: #fff;
+    color: var(--white-color); /*#fff;*/
 }
 
 .main-footer .main-footer__links .main-footer__link a:hover,
 .main-footer .main-footer__links .main-footer__link a:active{
-    color: #ccc;
+    color: var(--footer-hover); /*#ccc;*/
 }
 
 @media (min-width: 40rem){ /*16*40=640px*/
@@ -236,7 +238,7 @@ header.header-main > div > .header-main__brand img{
 .nav-toggle-button__bar {
   width: 100%;
   height: 0.2rem;
-  background: black;
+  background: var(--black-color); /*black;*/
   display: block;
   margin: 0.6rem 0;
 }
@@ -257,7 +259,7 @@ header.header-main > div > .header-main__brand img{
   z-index: 101;
   top: 0;
   left: 0;
-  background: white;
+  background: var(--white-color); /*white;*/
   width: 80%;
   height: 100vh;
 
