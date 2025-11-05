@@ -94,9 +94,27 @@ const jsSiteCore = {
         });
     },
 
+    attachCallToActionEventListener: function(){
+        const callToAction = this.get(".nav-main__item--cta");
+        if(!this.isElement(callToAction)) return;
+        
+        callToAction.addEventListener('animationstart', (event) => {
+            console.log('CalltoAction Animation Started', event);
+        });
+
+        callToAction.addEventListener('animationend', (event) => {
+            console.log('CalltoAction Animation Ended', event);
+        });
+        
+        callToAction.addEventListener('animationiteration', (event) => {
+            console.log('CalltoAction Animation Iteration', event);
+        });
+    },
+
     initialize(){
         this.objects.backdrop = this.get(".backdrop");
         this.attachBackdropClick();
+        this.attachCallToActionEventListener();
     }
 };
 
