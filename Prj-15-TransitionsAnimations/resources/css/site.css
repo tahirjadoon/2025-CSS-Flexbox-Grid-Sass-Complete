@@ -118,6 +118,25 @@ header.header-main > div > .header-main__brand img{
     border-bottom: 5px solid white;
 }
 
+/*KeyFrames for the cta button in the nav*/
+/*
+@keyframes wiggle1{
+    from{ transform: rotateZ(-10deg); }
+    to{ transform: rotateZ(10deg); }
+}
+*/
+
+@keyframes wiggle2{
+    0%{ transform: rotateZ(0); }
+    50%{ transform: rotateZ(-10deg); }
+    100%{ transform: rotateZ(10deg); }
+}
+
+.nav-main .nav-main__items li.nav-main__item--cta{
+    /*animation: wiggle1 200ms 3s 8 alternate;*/ /*name duration delay numberOfTimesItWillPlay whattodoaftereachanimation*/
+    animation: wiggle2 400ms 3s 8 ease-out none;
+}
+
 .nav-main .nav-main__items li.nav-main__item--cta a,
 .mobile-nav__item--cta a{
     color: white;
@@ -287,3 +306,4 @@ li.mobile-nav__item {
     transform: translateY(0) !important;
 }
 /*Close class*/
+
