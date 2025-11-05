@@ -1,0 +1,2 @@
+Prj-16-CssBetterCode builds on Prj-15-TransitionsAnimations. 
+Copied content from Prj-15-TransitionsAnimations to Prj-16-CssBetterCode

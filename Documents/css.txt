@@ -271,3 +271,9 @@ CSS Grid
 			footer;
 justify-self: center, start, end, stretch along x-axis
 align-self
+
+What Prefixes to use 
+------------------------------
+    Search: what css to prefix for more detail*/
+    https://github.com/postcss/autoprefixer
+    https://autoprefixer.github.io/
