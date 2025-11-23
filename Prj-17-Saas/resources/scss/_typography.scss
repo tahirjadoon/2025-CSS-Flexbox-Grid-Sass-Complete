@@ -1,5 +1,7 @@
+@use "variables.scss" as *;
+
 .char-highlight {
   font-weight: bold;
   font-size: 1.4rem;
-  color: #521751;
+  color: $main-color;
 }
