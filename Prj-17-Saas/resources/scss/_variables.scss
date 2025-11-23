@@ -4,5 +4,14 @@ $white: white;
 $details-background: #fae5ff;
 $box-shadow:  #ccc;
 
+//we can create map of color as above
+$colors: (
+    main: #521751, 
+    secondary: #fa923f, 
+    white: white, 
+    background: #fae5ff, 
+    boxShadow: #ccc
+);
+
 /*list*/
-$border-default: 0.05rem solid $main-color;;
+$border-default: 0.05rem solid $main-color;
