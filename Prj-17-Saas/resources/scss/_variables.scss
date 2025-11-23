@@ -13,11 +13,13 @@ $colors: (
     boxShadow: #ccc
 );
 
+
+$size-tiny: 1rem;
 $size: (
-    tiny: 1rem,
+    tiny: $size-tiny,
     medium: 1.4rem,
-    medium-extra: 2rem,
-    large: 3rem
+    medium-extra: $size-tiny * 2,
+    large: $size-tiny * 3
 );
 
 /*list*/
