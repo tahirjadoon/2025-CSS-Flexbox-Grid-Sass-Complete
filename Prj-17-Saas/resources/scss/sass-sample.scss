@@ -1,5 +1,3 @@
-/*@import "_typography.scss";*/
-
 @use "typography";
 
 
@@ -65,27 +63,29 @@ body {
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
+
+  li{
+    margin: 0.2rem 0;
+    background: white;
+  }
+
+  .documentation-link {
+    text-decoration: none;
+    color: #521751;
+    display: block;
+    padding: 0.2rem;
+    border: 0.05rem solid #521751;
+  }
+
+  .documentation-link:hover,
+  .documentation-link:active {
+    color: white;
+    background: #fa923f;
+    border-color: #fa923f;
+  }
+
 }
 
-.documentation-links li {
-  margin: 0.2rem 0;
-  background: white;
-}
-
-.documentation-links .documentation-link {
-  text-decoration: none;
-  color: #521751;
-  display: block;
-  padding: 0.2rem;
-  border: 0.05rem solid #521751;
-}
-
-.documentation-links .documentation-link:hover,
-.documentation-links .documentation-link:active {
-  color: white;
-  background: #fa923f;
-  border-color: #fa923f;
-}
 
 @media (min-width: 40rem) {
   html {
