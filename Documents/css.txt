@@ -348,10 +348,29 @@ SASS
             This will create a package.json 
 
         and then run the following to convert the scss to css 
-        > npm run sass
+        > npm run sass [sass here is from package.json]
 
 
             > prj-17-saas@1.0.0 sass
             > sass resources/scss:resources/css --watch
 
             Sass is watching for changes. Press Ctrl-C to stop.
+
+        > npm run build-css [build-css here is from package.json]
+
+
+    Package.json 
+    {
+        "name": "prj-17-saas",
+        "version": "1.0.0",
+        "main": "index.js",
+        "scripts": {
+            "sass": "sass resources/scss:resources/css --watch --source-map",
+            "build-css": "sass resources/scss:resources/css --no-source-map --style=compressed"
+        },
+        "keywords": [],
+        "author": "",
+        "license": "ISC",
+        "description": ""
+    }
+

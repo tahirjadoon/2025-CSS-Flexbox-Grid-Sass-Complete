@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass resources/scss:resources/css --watch"
+    "sass": "sass resources/scss:resources/css --watch --source-map",
+    "build-css": "sass resources/scss:resources/css --no-source-map --style=compressed"
   },
   "keywords": [],
   "author": "",
