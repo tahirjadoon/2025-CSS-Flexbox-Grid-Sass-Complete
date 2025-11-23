@@ -78,13 +78,14 @@ body {
     display: block;
     padding: 0.2rem;
     border: $border-default;
-  }
 
-  .documentation-link:hover,
-  .documentation-link:active {
-    color: $white;
-    background: $list-hover;
-    border-color: $list-hover;
+    &:hover,
+    &:active {
+        color: $white;
+        background: $list-hover;
+        border-color: $list-hover;
+    }
+
   }
 
 }
