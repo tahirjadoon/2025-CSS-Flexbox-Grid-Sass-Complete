@@ -1,0 +1,33 @@
+$main-color: #521751;
+$list-hover: #fa923f;
+$white: white;
+$details-background: #fae5ff;
+$box-shadow:  #ccc;
+
+//we can create map of color as above
+$colors: (
+    main: #521751, 
+    secondary: #fa923f, 
+    white: white, 
+    background: #fae5ff, 
+    boxShadow: #ccc
+);
+
+
+$size-tiny: 1rem;
+$size: (
+    tiny: $size-tiny,
+    medium: 1.4rem,
+    medium-extra: $size-tiny * 2,
+    large: $size-tiny * 3
+);
+
+/*list*/
+$border-default: 0.05rem solid $main-color;
+
+/*mixin*/
+@mixin vendor-prefix(){
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}

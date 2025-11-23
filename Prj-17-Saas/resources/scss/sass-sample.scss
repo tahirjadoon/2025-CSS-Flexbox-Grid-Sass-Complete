@@ -1,0 +1,107 @@
+@use "sass:map";
+@use "variables" as *;
+@use "typography";
+
+
+html {
+  font-size: 94.75%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  @include vendor-prefix();
+  display: flex;
+  /*flex-direction: column;
+  flex-wrap: nowrap;*/
+  flex: {
+    direction: column;
+    wrap: nowrap;
+  }
+  align-items: center;
+  padding: map.get($size, large) 0; //3rem
+  box-sizing: border-box;
+}
+
+.sass-common{
+    border: $border-default;
+    background: $details-background;
+    text-align: center;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.sass-introduction {
+  @extend .sass-common;
+  padding: map.get($size, medium-extra); //2rem;
+  box-shadow: 0.2rem 0.2rem 0.1rem $box-shadow;
+
+   p {
+    margin: 0;
+  }
+}
+
+.sass-details {
+  @extend .sass-common;
+  padding: map.get($size, tiny); //1rem;
+  margin: map.get($size, medium-extra) 0; //2rem
+}
+
+.section-header {
+  border-bottom: 0.05rem solid map.get($colors, main); //$main-color
+
+  h1 {
+    margin: 0 0 map.get($size, tiny) 0; //1rem
+  }
+}
+
+
+.documentation-links {
+  list-style: none;
+  margin: map.get($size, tiny) 0 0 0; //1rem
+  padding: 0;
+  @include vendor-prefix();
+  display: flex;
+  flex-direction: column;
+
+  li{
+    margin: 0.2rem 0;
+    background: $white;
+  }
+
+  .documentation-link {
+    text-decoration: none;
+    color: map.get($colors, main); //$main-color
+    display: block;
+    padding: 0.2rem;
+    border: $border-default;
+
+    &:hover,
+    &:active {
+        color: $white;
+        background: $list-hover;
+        border-color: $list-hover;
+    }
+
+  }
+
+}
+
+
+@media (min-width: 40rem) {
+  html {
+    font-size: 125%;
+  }
+
+  .container {
+    padding: map.get($size, large) 0; //3rem
+  }
+
+  .sass-introduction,
+  .sass-details {
+    width: 30rem;
+  }
+}

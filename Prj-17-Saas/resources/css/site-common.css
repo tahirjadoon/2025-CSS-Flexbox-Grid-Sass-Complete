@@ -1,0 +1,9 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --black-overlay-color: rgba(0, 0, 0, 0.5);
+    --header-main-background-color: #2ddf5c;
+    --header-main-brannd-color: #0e4f1f;
+    --nav-cta-color: #ff1b68;
+    --footer-hover: #ccc;
+}
