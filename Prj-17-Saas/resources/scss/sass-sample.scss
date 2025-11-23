@@ -12,10 +12,14 @@ body {
   margin: 0;
 }
 
-.container {
+.browser-extensions-common{
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
+}
+
+.container {
+  @extend .browser-extensions-common;
   display: flex;
   /*flex-direction: column;
   flex-wrap: nowrap;*/
@@ -28,14 +32,18 @@ body {
   box-sizing: border-box;
 }
 
+.sass-common{
+    border: $border-default;
+    background: $details-background;
+    text-align: center;
+    width: 90%;
+    box-sizing: border-box;
+}
+
 .sass-introduction {
-  border: $border-default;
-  background: $details-background;
+  @extend .sass-common;
   padding: map.get($size, medium-extra); //2rem;
-  text-align: center;
   box-shadow: 0.2rem 0.2rem 0.1rem $box-shadow;
-  width: 90%;
-  box-sizing: border-box;
 }
 
 .sass-introduction p {
@@ -43,13 +51,9 @@ body {
 }
 
 .sass-details {
-  border: $border-default;
-  background: $details-background;
+  @extend .sass-common;
   padding: map.get($size, tiny); //1rem;
-  text-align: center;
   margin: map.get($size, medium-extra) 0; //2rem
-  width: 90%;
-  box-sizing: border-box;
 }
 
 .section-header {
@@ -64,9 +68,7 @@ body {
   list-style: none;
   margin: map.get($size, tiny) 0 0 0; //1rem
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+  @extend .browser-extensions-common;
   display: flex;
   flex-direction: column;
 

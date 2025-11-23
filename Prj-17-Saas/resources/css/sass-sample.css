@@ -14,10 +14,13 @@ body {
   margin: 0;
 }
 
-.container {
+.browser-extensions-common, .documentation-links, .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
+}
+
+.container {
   display: flex;
   /*flex-direction: column;
   flex-wrap: nowrap;*/
@@ -28,14 +31,17 @@ body {
   box-sizing: border-box;
 }
 
-.sass-introduction {
+.sass-common, .sass-details, .sass-introduction {
   border: 0.05rem solid #521751;
   background: #fae5ff;
-  padding: 2rem;
   text-align: center;
-  box-shadow: 0.2rem 0.2rem 0.1rem #ccc;
   width: 90%;
   box-sizing: border-box;
+}
+
+.sass-introduction {
+  padding: 2rem;
+  box-shadow: 0.2rem 0.2rem 0.1rem #ccc;
 }
 
 .sass-introduction p {
@@ -43,13 +49,8 @@ body {
 }
 
 .sass-details {
-  border: 0.05rem solid #521751;
-  background: #fae5ff;
   padding: 1rem;
-  text-align: center;
   margin: 2rem 0;
-  width: 90%;
-  box-sizing: border-box;
 }
 
 .section-header {
@@ -64,9 +65,6 @@ body {
   list-style: none;
   margin: 1rem 0 0 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   flex-direction: column;
 }
