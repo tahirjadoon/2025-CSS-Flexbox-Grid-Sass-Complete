@@ -1,0 +1,12 @@
+{
+  "name": "prj-17-saas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass resources/scss:resources/css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

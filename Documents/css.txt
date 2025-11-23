@@ -277,3 +277,81 @@ What Prefixes to use
     Search: what css to prefix for more detail*/
     https://github.com/postcss/autoprefixer
     https://autoprefixer.github.io/
+
+
+SASS
+------------------------------
+    Syntactically Awesome Style Sheets
+    Compiled to css 
+
+    Nested Rules
+    Helper Functions
+    Inheritance
+    Mixins
+    Partials
+    Conditions & Loops
+    Variables
+
+    https://sass-lang.com/
+    https://sass-lang.com/install/
+
+    Intall nvm 
+        https://github.com/coreybutler/nvm-windows/releases 
+
+        >nvm -list
+
+    Install node with nvm 
+        > nvm install lts
+        > nvm install <version_number>
+        > nvm install latest
+
+    Check the version of node and npm installed
+        >nvm ls
+
+        * 22.15.0 (Currently using 64-bit executable)
+        18.17.0
+
+    To switch the node version 
+        > nvm use <version_number>
+
+    To check npm
+        > npm -v
+        10.9.2
+
+    Instal SASS with npm
+        > npm install -g sass
+
+            added 17 packages in 15s
+            npm notice
+            npm notice New major version of npm available! 10.9.2 -> 11.6.3
+            npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.3
+            npm notice To update run: npm install -g npm@11.6.3
+            npm notice
+
+        > sass --version
+            1.94.2 compiled with dart2js 3.10.1
+
+    Convert SASS to CSS 
+        > sass input.scss output.css
+        > sass --watch input.scss output.css
+        > sass --watch scss:css
+
+    In command prompt go to 
+        > cd C:\00Learning\Learning-Examples\Design2018\2025 CSS Flexbox Grid Sass Complete\Prj-17-Saas
+
+        and then  
+        > sass resources/scss:resources/css
+
+    Alternatively, create a package.json 
+        > cd C:\00Learning\Learning-Examples\Design2018\2025 CSS Flexbox Grid Sass Complete\Prj-17-Saas
+        > npm init -y
+            This will create a package.json 
+
+        and then run the following to convert the scss to css 
+        > npm run sass
+
+
+            > prj-17-saas@1.0.0 sass
+            > sass resources/scss:resources/css --watch
+
+            Sass is watching for changes. Press Ctrl-C to stop.
