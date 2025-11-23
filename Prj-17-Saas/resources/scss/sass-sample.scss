@@ -12,14 +12,8 @@ body {
   margin: 0;
 }
 
-.browser-extensions-common{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-}
-
 .container {
-  @extend .browser-extensions-common;
+  @include vendor-prefix();
   display: flex;
   /*flex-direction: column;
   flex-wrap: nowrap;*/
@@ -68,7 +62,7 @@ body {
   list-style: none;
   margin: map.get($size, tiny) 0 0 0; //1rem
   padding: 0;
-  @extend .browser-extensions-common;
+  @include vendor-prefix();
   display: flex;
   flex-direction: column;
 

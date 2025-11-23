@@ -24,3 +24,10 @@ $size: (
 
 /*list*/
 $border-default: 0.05rem solid $main-color;
+
+/*mixin*/
+@mixin vendor-prefix(){
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
