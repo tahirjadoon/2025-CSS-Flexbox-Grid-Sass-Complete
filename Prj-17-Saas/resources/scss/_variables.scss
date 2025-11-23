@@ -13,5 +13,12 @@ $colors: (
     boxShadow: #ccc
 );
 
+$size: (
+    tiny: 1rem,
+    medium: 1.4rem,
+    medium-extra: 2rem,
+    large: 3rem
+);
+
 /*list*/
 $border-default: 0.05rem solid $main-color;

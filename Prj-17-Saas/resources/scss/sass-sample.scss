@@ -24,14 +24,14 @@ body {
     wrap: nowrap;
   }
   align-items: center;
-  padding: 3rem 0;
+  padding: map.get($size, large) 0; //3rem
   box-sizing: border-box;
 }
 
 .sass-introduction {
   border: $border-default;
   background: $details-background;
-  padding: 2rem;
+  padding: map.get($size, medium-extra); //2rem;
   text-align: center;
   box-shadow: 0.2rem 0.2rem 0.1rem $box-shadow;
   width: 90%;
@@ -45,9 +45,9 @@ body {
 .sass-details {
   border: $border-default;
   background: $details-background;
-  padding: 1rem;
+  padding: map.get($size, tiny); //1rem;
   text-align: center;
-  margin: 2rem 0;
+  margin: map.get($size, medium-extra) 0; //2rem
   width: 90%;
   box-sizing: border-box;
 }
@@ -57,12 +57,12 @@ body {
 }
 
 .section-header h1 {
-  margin: 0 0 1rem 0;
+  margin: 0 0 map.get($size, tiny) 0; //1rem
 }
 
 .documentation-links {
   list-style: none;
-  margin: 1rem 0 0 0;
+  margin: map.get($size, tiny) 0 0 0; //1rem
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,7 +99,7 @@ body {
   }
 
   .container {
-    padding: 3rem 0;
+    padding: map.get($size, large) 0; //3rem
   }
 
   .sass-introduction,
